@@ -6,7 +6,7 @@ def caesar_cipher(string, key)
   string_array.each do | letter |
     if alphabet.include?(letter)
       current_position = alphabet.index(letter)
-      new_position = (current_position + key) % 27
+      new_position = (current_position + key.to_i) % 27
       new_letter = alphabet[new_position]
       answer.push(new_letter)
     else
@@ -15,3 +15,5 @@ def caesar_cipher(string, key)
   end
   answer
 end
+
+puts caesar_cipher('What a string!', 5)
