@@ -9,6 +9,9 @@ def caesar_cipher(string, key)
       new_position = (current_position + key) % 27
       new_letter = alphabet[new_position]
       answer.push(new_letter)
+    else
+      answer.push(letter)
     end
   end
+  answer
 end
